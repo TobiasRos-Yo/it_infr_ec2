@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Erstellt eine EC2 t2.micro Instanz mit vorgegebener AMI und Security Group
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0102e6d6e7253c77a
+      SecurityGroupIds:
+        - sg-0ad8bdcc157468f54
+      Tags:
+        - Key: Name
+          Value: MeineEC2Instanz
